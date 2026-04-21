@@ -9,6 +9,9 @@ const Hero = () => {
     "Next.js",
     "TypeScript",
     "Node.js",
+    "Python",
+    "Java",
+    "JavaFX",
     "Rest APIs",
     "PostgreSQL",
     "MongoDB",
@@ -20,8 +23,6 @@ const Hero = () => {
     "GitHub Actions",
   ];
 
- 
- 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* background */}
@@ -78,12 +79,21 @@ const Hero = () => {
             </div>
             {/* CTA Buttons */}
             <div className="gap-4 flex flex-wrap animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Get In Touch <ArrowRight className="w-5 h-5" />
+              <Button
+                size="lg"
+                onClick={() =>
+                  document
+                    .getElementById("contacts")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Get In Touch
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
-                Download CV
+                
+                  Download CV
+                
               </AnimatedBorderButton>
             </div>
             {/* links */}
@@ -147,24 +157,40 @@ const Hero = () => {
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
-              {[...skills, ...skills].map((skill, index) => (
-                <div className="flex-shrink-0 px-8 py-4">
-                  <span
-                    key={index}
-                    className="text-xl font-semibold text-muted-foreground/50 hover:text-foreground transition-colors "
+            <div className="relative overflow-hidden w-full">
+              <div className="flex w-max animate-marquee">
+                {[...skills].map((skill, index) => (
+                  <div
+                    key={`first-${index}`}
+                    className="flex-shrink-0 px-8 py-4"
                   >
-                    {skill}
-                  </span>
-                </div>
-              ))}
+                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-foreground transition-colors">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
+
+                {[...skills].map((skill, index) => (
+                  <div
+                    key={`second-${index}`}
+                    className="flex-shrink-0 px-8 py-4"
+                  >
+                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-foreground transition-colors">
+                      {skill}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in animation-delay-800">
-        <a href="#about" className="flex flex-col items-center gap-2  text-muted-foreground hover:text-primary">
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2  text-muted-foreground hover:text-primary"
+        >
           <span>Scroll</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>

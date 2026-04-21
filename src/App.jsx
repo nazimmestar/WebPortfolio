@@ -3,8 +3,9 @@ import Navbar from '@/layout/Navbar';
 import Hero from '@/sections/Hero'  ;
 import About from '@/sections/About';
 import Projects from '@/sections/Projects';
-import Experience from '@/sections/Experience';
+import Journey from '@/sections/Journey';
 import Contacts from '@/sections/Contacts';
+import Footer from '@/layout/Footer';
 
 
 const App = () => {
@@ -16,9 +17,11 @@ const App = () => {
         <Hero/>
         <About/>
         <Projects/>
-        <Experience/>
+        <Journey/>
         <Contacts/>
       </main>
+
+      <Footer />
       
     </div>
   )

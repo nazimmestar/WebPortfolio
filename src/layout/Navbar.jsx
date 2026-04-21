@@ -1,36 +1,36 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@/components/Button";
-import { Menu,  X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navlinks = [
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
+  { name: "Journey", href: "#Journey" },
   { name: "Contacts", href: "#contacts" },
 ];
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-   const [isScrolled, setisScrolled] = useState(false);
-  
- useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setisScrolled(true);
-    } else {
-      setisScrolled(false);
-    }
-  }
+  const [isScrolled, setisScrolled] = useState(false);
 
-  window.addEventListener("scroll", handleScroll);
-  
-  return () => window.removeEventListener("scroll", handleScroll);
-  
-   
- }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setisScrolled(true);
+      } else {
+        setisScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 transition-all ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"}   z-50`}>
+    <header
+      className={`fixed top-0 left-0 right-0 transition-all ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"}   z-50`}
+    >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
@@ -54,15 +54,33 @@ const Navbar = () => {
         </div>
         {/* CTA Button */}
         <div className="max-sm:hidden block">
-          <Button size="sm">Contact me</Button>
+          <Button
+            size="sm"
+            onClick={() =>
+              document
+                .getElementById("contacts")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Contact me
+          </Button>
         </div>
 
         {/* mobile menu button */}
-        <button className="max-sm:block hidden p-2 text-foreground cursor-pointer" size="sm">
+        <button
+          className="max-sm:block hidden p-2 text-foreground cursor-pointer"
+          size="sm"
+        >
           {isMobileMenuOpen ? (
-            <X size={24} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+            <X
+              size={24}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
           ) : (
-            <Menu size={24} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+            <Menu
+              size={24}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
           )}
         </button>
       </nav>
