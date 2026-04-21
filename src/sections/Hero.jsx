@@ -89,7 +89,7 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton href="/cv.pdf" download="Nazim-Mestar-CV.pdf">
                 <Download className="w-5 h-5" />
                 
                   Download CV

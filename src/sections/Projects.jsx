@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
@@ -47,13 +47,13 @@ const projects = [
     tags: ["Figma", "UI/UX", "Graphic Design", "Branding"],
     link: "https://www.behance.net/ce676344",
     github: "#",
-    behance:"/behance.svg"
+    behance: "/behance.svg",
   },
 ];
 
 const Projects = () => {
   return (
-      <section id="projects" className="py-32 relative overflow-hidden">
+    <section id="projects" className="py-32 relative overflow-hidden">
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
@@ -95,8 +95,8 @@ const Projects = () => {
                 {/* Overlay Links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {project.link !== "#" && (
-                    
-                      <a href={project.link}
+                    <a
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
@@ -105,16 +105,15 @@ const Projects = () => {
                     </a>
                   )}
                   {project.github !== "#" && (
-                    
-                      <a href={project.github}
+                    <a
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                     >
-                        <img src="/github.svg" alt="GitHub" className="w-4 h-4" />
+                      <img src="/github.svg" alt="GitHub" className="w-4 h-4" />
                     </a>
                   )}
-                  
                 </div>
               </div>
 
@@ -126,8 +125,8 @@ const Projects = () => {
                   </h3>
                   <div className="flex items-center gap-2">
                     {project.link !== "#" && (
-                      
-                        <a href={project.link}
+                      <a
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-xs px-3 py-1 rounded-full border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
@@ -137,23 +136,31 @@ const Projects = () => {
                       </a>
                     )}
                     {project.github !== "#" && (
-                      
-                        <a href={project.github}
+                      <a
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        <img src="/github.svg" alt="GitHub" className="w-4 h-4" />
+                        <img
+                          src="/github.svg"
+                          alt="GitHub"
+                          className="w-4 h-4"
+                        />
                       </a>
                     )}
                     {project.github == "#" && project.behance && (
-                      
-                        <a href={project.link}
+                      <a
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        <img src={project.behance} alt="Behance" className="w-7 h-7" />
+                        <img
+                          src={project.behance}
+                          alt="Behance"
+                          className="w-7 h-7"
+                        />
                       </a>
                     )}
                   </div>
@@ -183,7 +190,13 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AnimatedBorderButton>
+            <AnimatedBorderButton
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               View All Projects
               <ArrowUpRight className="w-5 h-5" />
             </AnimatedBorderButton>
@@ -191,7 +204,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
