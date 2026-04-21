@@ -41,7 +41,8 @@ This project highlights my skills, projects, and creative approach to building c
 src/
 ├── components/
 ├── sections/
-├── assets/
+├── layout/
+├── index.css
 ├── App.jsx
 └── main.jsx
 ```
