@@ -99,7 +99,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button>Contact me</Button>
+            <Button onClick={() =>
+              document
+                .getElementById("contacts")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }>Contact me 
+            </Button>
           </div>
         </div>
       )}

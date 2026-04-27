@@ -57,6 +57,6 @@ I build modern web applications and design visual brand identities, combining de
 
 ## 🔗 Social Links
 
-GitHub: https://github.com/yourusername
-LinkedIn: https://linkedin.com/in/yourusername
-Email: your@email.com
+GitHub: https://github.com/nazimmestar
+LinkedIn: https://www.linkedin.com/in/nazim-mestar-21021229b/
+Email: nazim.mestar17@email.com
