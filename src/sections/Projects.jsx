@@ -8,7 +8,7 @@ const projects = [
     description:
       "An AI-powered resume analyzer that scans uploaded CVs and generates structured feedback. Uses Puter.js as a serverless backend for LLM inference, file storage, and auth — no custom backend needed.",
     image: "/projects/ResumeIq.png",
-    tags: ["React", "TypeScript", "Puter.js", "AI / LLM"],
+    tags: ["React-Router", "TypeScript", "Puter.js", "AI / LLM"],
     link: "https://resumeiq17.netlify.app/",
     github: "https://github.com/nazimmestar",
   },
