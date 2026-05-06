@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Jijel, DZ", 
+    value: "Algeria", 
     href: "https://maps.app.goo.gl/XTNQW3arADbcRtGm7",
   },
 ];
