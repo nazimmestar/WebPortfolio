@@ -9,8 +9,14 @@ const Hero = () => {
     "Next.js",
     "TypeScript",
     "Node.js",
+    "React-router",
+    "Npm",
+    "Vite",
+    "Appwrite",
+    "Puter",
     "Python",
     "Java",
+    "Cloudsim plus",
     "JavaFX",
     "Rest APIs",
     "PostgreSQL",
@@ -21,6 +27,7 @@ const Hero = () => {
     "Figma",
     "Git",
     "GitHub Actions",
+    "Cloud AI",
   ];
 
   return (
