@@ -15,13 +15,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "nazim.mestar17.com",
+    value: "nazim.mestar17@gmail.com",
     href: "mailto:nazim.mestar17.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+213 (674-48-50-43)",
+    value: "+213 674-48-50-43",
     href: "tel:+213674485043",
   },
   {
